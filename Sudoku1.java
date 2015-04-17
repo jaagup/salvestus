@@ -9,6 +9,20 @@ public class Sudoku1{
          laud[i][j]=Integer.parseInt(m[j]);
        }
      }
-     
+    for(int reanr=0; reanr<9; reanr++){
+     int[][] abi=new int[10][3];
+     for(int j=0; j<9; j++){
+        int arv=laud[reanr][j];
+        if(abi[arv][0]==0){
+          abi[arv][0]=1;
+          abi[arv][1]=reanr;
+          abi[arv][2]=j; 
+        }
+        else{
+          System.out.println(arv+" kohal "+reanr+" "+j+" korduv");
+          System.out.println("varasem "+abi[arv][1]+" "+abi[arv][2]);        
+        }
+     }     
+    }
   }
 }
